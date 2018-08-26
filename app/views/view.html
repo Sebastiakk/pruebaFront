@@ -1,0 +1,38 @@
+<spinn state="control.state"></spinn>
+
+<div ng-show="!control.state">
+    <div class="row">
+        <div class="col s12">
+            <div class="col s12 m9 ">
+                <div id="video" class="center-align"></div>
+                <div class="card-panel">
+                    <h5>{{control.video.snippet.title}}</h5>
+                    <div>
+                        <p ng-bind-html="control.texto(control.video.snippet.description)"></p>
+                    </div>
+                    <div>
+                        <div ng-repeat="tag in control.video.snippet.tags" class="chip">
+                            {{tag}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 ">
+                <h5 class="center">Related videos</h5>
+                <div ng-repeat="dato in control.reco" class="col s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img ng-src="{{dato.snippet.thumbnails.default.url}}">
+                        </div>
+                        <div class="card-content">
+                            <span><b>{{dato.snippet.title}}</b></span>
+                        </div>
+                        <div class="card-action">
+                            <a ng-click="control.watch_video(dato)" href="">Watch video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

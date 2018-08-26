@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="youtube" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../bower_components/materialize/dist/css/materialize.min.css">
+    <link rel="shortcut icon" href="images/logo_ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../bower_components/SpinKit/css/spinkit.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>YOUTUBE MEJORADO</title>
+</head>
+
+<body>
+    <div ng-include="'views/navbar.html'"></div>
+    <div ui-view style="min-height: 500px"></div>
+    <div ng-include="'views/footer.html'"></div>
+
+    <!-- LIBRARIES -->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/materialize/dist/js/materialize.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+
+    <!-- CONFG APP -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/config/router.js"></script>
+    <script src="scripts/config/url.js"></script>
+
+    <!-- DIRECTIVES  -->
+    <script src="scripts/directives/card_video.js"></script>
+    <script src="scripts/directives/spinn.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="scripts/controllers/controller_main.js"></script>
+    <script src="scripts/controllers/controller_search.js"></script>
+    <script src="scripts/controllers/controller_detail_video.js"></script>
+    <script src="scripts/controllers/controller_navbar.js"></script>
+
+    <!-- services -->
+    <script src="scripts/services/service_main.js"></script>
+</body>
+
+</html>

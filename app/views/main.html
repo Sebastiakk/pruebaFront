@@ -1,0 +1,22 @@
+<div class="container">
+    <h4 class="center" ng-if="!control.reco.length>0">
+        Let’s reinvent the wheel and make our own Youtube! ;)
+    </h4>
+    <div class="row" ng-if="control.reco.length>0">
+        <h4 class="center">Related to your last watched video</h4>
+        <div ng-repeat="dato in control.reco" class="col s12 m4">
+            <div class="card medium">
+                <div class="card-image">
+                    <img ng-src="{{dato.snippet.thumbnails.high.url}}">
+                    <span class="card-title">{{dato.snippet.title}}</span>
+                </div>
+                <div class="card-content">
+                    <p>{{dato.snippet.description}}</p>
+                </div>
+                <div class="card-action">
+                    <a ng-click="control.watch_video(dato)" href="">Watch video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

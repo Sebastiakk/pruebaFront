@@ -1,0 +1,18 @@
+<div ng-controller="control_barra as barra" class="navbar-fixed" style="margin-bottom: 50px">
+    <nav class="blue">
+        <div class="nav-wrapper container">
+            <a ui-sref="index" class="brand-logo">
+                <img src="./images/logo.png" alt="BP">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li ng-hide="barra.estado_barra" class="white">
+                    <div class="input-field" style="padding: auto 20px;">
+                        <input  ng-model="barra.buscar" ng-change="barra.buscar_video()" id="buscar" type="text" style="margin-bottom: 0px;  color: #000;">
+                        <label for="buscar">Search...</label>
+                    </div>
+                </li>
+                <li><a ng-click="barra.estado_barra=!barra.estado_barra" href=""><i class="material-icons">search</i></a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
